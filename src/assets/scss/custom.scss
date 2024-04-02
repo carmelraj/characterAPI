@@ -1,0 +1,8 @@
+@import './variables.scss';
+body{
+     line-height: 1.5;
+     text-align: left;
+     font-size: $regularSize;        
+     text-decoration: none;
+     background: $white;
+}
