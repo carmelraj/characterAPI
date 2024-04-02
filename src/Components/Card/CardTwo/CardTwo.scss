@@ -1,5 +1,5 @@
-@import '../../../assets//scss/variables.scss';
-.CardOne{
+@import '../../../assets/scss/variables.scss';
+.CardTwo{
     display: flex;    
     flex-direction: row;
     width: 100%;
@@ -53,5 +53,5 @@
                 color: $orange;
             }
         }
-    }    
+    }  
 }

@@ -1,54 +1,54 @@
-.CardOne {
+.CardTwo {
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: 0 0 30px 0;
 }
-.CardOne figure {
+.CardTwo figure {
   width: 50%;
   margin: 0;
 }
-.CardOne figure img {
+.CardTwo figure img {
   width: 100%;
   height: 100%;
   border-radius: 5% 0 0 5%;
 }
-.CardOne .content {
+.CardTwo .content {
   width: 100%;
   padding: 0 0 0 20px;
   background: #9F9F9F;
   border-radius: 0 5% 5% 0;
 }
-.CardOne .content h2 {
+.CardTwo .content h2 {
   font-size: 1.5rem;
   margin: 10px 0 0 0;
 }
-.CardOne .content .status span {
+.CardTwo .content .status span {
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   margin-right: 7px;
 }
-.CardOne .content .status .green {
+.CardTwo .content .status .green {
   background: green;
 }
-.CardOne .content .status .red {
+.CardTwo .content .status .red {
   background: red;
 }
-.CardOne .content .status .unknown {
+.CardTwo .content .status .unknown {
   background: #E4DFDF;
 }
-.CardOne .content h5 {
+.CardTwo .content h5 {
   color: #DFDFDF;
   font-size: 1rem;
 }
-.CardOne .content a {
+.CardTwo .content a {
   margin: 0;
   color: #202329;
   font-size: 1.15rem;
   text-decoration: none;
 }
-.CardOne .content a:hover {
+.CardTwo .content a:hover {
   color: #FF9800;
 }

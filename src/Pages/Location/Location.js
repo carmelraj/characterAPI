@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./subCharacter.scss";
+import "./Location.scss";
 import { useParams } from "react-router-dom";
 import UseAxios from "../../Components/Hooks/UseAxios/UseAxios";
-// import CardOne from "../../Components/Card/CardOne/CardOne";
 import CardTwo from "../../Components/Card/CardTwo/CardTwo";
-import UseLoader from "../../Components/Loader/Loader";
-import { Container, Row, Col } from "react-bootstrap";
-import BreadCrum from "../../Components/Breadcrum/Breadcrumn";
-const SubCharacter = () => {
+import CardThree from "../../Components/Card/CardThree/CardThree";
+const Location = () => {
   const { data, loading, error, fetchData } = UseAxios();
   const { id } = useParams();
 
@@ -23,15 +20,11 @@ const SubCharacter = () => {
   useEffect(() => {
     fetchSpecificCharacter();
   }, []);
-
+  // console.log("location", data);
   return (
-    <div className="subCharacter" data-testid="SubCharacter">
-      <Container>
-        {loading && <UseLoader />}
-        <BreadCrum />
-        <CardTwo data={data} />
-      </Container>
+    <div className="Location" data-testid="Location">
+      <CardThree data={data} />
     </div>
   );
 };
-export default SubCharacter;
+export default Location;
