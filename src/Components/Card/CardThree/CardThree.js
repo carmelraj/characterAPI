@@ -28,9 +28,9 @@ const CardThree = ({ data }) => {
             <p className="status">
               <span
                 className={
-                  data?.status == "Alive"
+                  data?.status === "Alive"
                     ? "green"
-                    : data?.status == "Dead"
+                    : data?.status === "Dead"
                     ? "red"
                     : "unknown"
                 }

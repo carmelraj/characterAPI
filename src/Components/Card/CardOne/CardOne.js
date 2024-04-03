@@ -1,23 +1,23 @@
 import "./CardOne.scss";
-import { useState } from "react";
-import { Row, Col, Image, Figure } from "react-bootstrap";
+// import { useState } from "react";
+import { Image, Figure } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible,
-};
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 10 },
+//   visible,
+// };
 const CardOne = ({ data }) => {
-  const [id, setId] = useState(0);
+  // const [id, setId] = useState(0);
   const navigator = useNavigate();
 
   // show the location of the character
   const showMoreDate = () => {
     const linkUrl = data?.location?.url;
     const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
+    // setId(number);
     navigator(`/location/${number}`);
   };
 
@@ -25,7 +25,7 @@ const CardOne = ({ data }) => {
   const showResedence = () => {
     const linkUrl = data?.origin?.url;
     const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
+    // setId(number);
     navigator(`/resedence/${number}`);
     console.log(data?.origin?.url);
   };
@@ -61,9 +61,9 @@ const CardOne = ({ data }) => {
         >
           <span
             className={
-              data.status == "Alive"
+              data.status === "Alive"
                 ? "green"
-                : data.status == "Dead"
+                : data.status === "Dead"
                 ? "red"
                 : "unknown"
             }

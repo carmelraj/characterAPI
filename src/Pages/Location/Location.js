@@ -8,7 +8,6 @@ const Location = () => {
   const { data, fetchData } = UseAxios();
   const { id } = useParams();
 
-  console.log(data);
   // fetch a character
   const fetchSpecificCharacter = () => {
     fetchData({

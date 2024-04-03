@@ -7,7 +7,7 @@ import UseLoader from "../../Components/Loader/Loader";
 const Home = () => {
   // note: animation are added to some of the pages.
 
-  const { data, loading, error, fetchData } = UseAxios();
+  const { data, loading, fetchData } = UseAxios();
 
   // fetch a character using axios get method
   const fetchCharacter = () => {
