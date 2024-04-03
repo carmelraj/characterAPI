@@ -18,7 +18,8 @@ const Home = () => {
       });
     };
     fetchCharacter();
-  }, [fetchData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="Home" data-testid="Home">

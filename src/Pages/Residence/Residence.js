@@ -16,7 +16,8 @@ const Residence = () => {
       });
     };
     fetchSpecificCharacter();
-  }, [fetchData, id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="Residence" data-testid="Residence">
       <CardFour data={data} />

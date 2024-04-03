@@ -18,7 +18,8 @@ const Location = () => {
     };
 
     fetchSpecificCharacter();
-  }, [fetchData, id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   // console.log("location", data);
   return (
     <div className="Location" data-testid="Location">

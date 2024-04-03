@@ -42,7 +42,10 @@ const CardOne = ({ data }) => {
         <Image src={data.image} alt={data.name} />
       </Figure>
       <div className="content">
-        <Link to={`/subcharacter/${data.id}`} target="_blank">
+        <Link
+          to={`https://660d0f18858f4da7c70af06b--charactersapi.netlify.app/subcharacter/${data.id}`}
+          target="_blank"
+        >
           <motion.h2
             variants={{
               hidden: { opacity: 0, y: -20 },
