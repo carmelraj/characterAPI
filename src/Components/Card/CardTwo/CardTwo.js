@@ -1,26 +1,26 @@
 import "./CardTwo.scss";
-import { useState } from "react";
+// import { useState } from "react";
 import { Image, Figure } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
 const CardTwo = ({ data }) => {
-  const [id, setId] = useState(0);
+  // const [id, setId] = useState(0);
   const navigator = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
 
   const showMoreDate = () => {
     const linkUrl = data?.location?.url;
     const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
+    // setId(number);
     navigator(`/location/${number}`);
   };
 
   const showResedence = () => {
     const linkUrl = data?.origin?.url;
     const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
+    // setId(number);
     navigator(`/resedence/${number}`);
     console.log(data?.origin?.url);
   };
