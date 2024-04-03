@@ -1,7 +1,7 @@
 import "./CardOne.scss";
 // import { useState } from "react";
 import { Image, Figure } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -15,10 +15,10 @@ const CardOne = ({ data }) => {
 
   // show the location of the character
   const showMoreDate = () => {
-    const linkUrl = data?.location?.url;
-    const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
+    // const linkUrl = data?.location?.url;
+    // const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
     // setId(number);
-    navigator(`/location/${number}`);
+    navigator(`/subcharacter/${data.id}`);
   };
 
   // show the residence of the character
@@ -28,6 +28,10 @@ const CardOne = ({ data }) => {
     // setId(number);
     navigator(`/resedence/${number}`);
     console.log(data?.origin?.url);
+  };
+
+  const openSpeicualCharacter = () => {
+    navigator(`subcharacter/${data.id}`);
   };
 
   return (
@@ -42,10 +46,8 @@ const CardOne = ({ data }) => {
         <Image src={data.image} alt={data.name} />
       </Figure>
       <div className="content">
-        <Link
-          to={`https://660d0f18858f4da7c70af06b--charactersapi.netlify.app/subcharacter/${data.id}`}
-          target="_blank"
-        >
+        {/* to={`https://660d0f18858f4da7c70af06b--charactersapi.netlify.app/subcharacter/${data.id}`} */}
+        <div onClick={openSpeicualCharacter} className="pointer">
           <motion.h2
             variants={{
               hidden: { opacity: 0, y: -20 },
@@ -54,7 +56,7 @@ const CardOne = ({ data }) => {
           >
             {data.name}
           </motion.h2>
-        </Link>
+        </div>
         <motion.p
           variants={{
             hidden: { opacity: 0, y: -20 },
