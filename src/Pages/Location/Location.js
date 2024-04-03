@@ -8,17 +8,17 @@ const Location = () => {
   const { data, fetchData } = UseAxios();
   const { id } = useParams();
 
-  // fetch a character
-  const fetchSpecificCharacter = () => {
-    fetchData({
-      url: `/api/character/${id}`,
-      method: "GET",
-    });
-  };
-
   useEffect(() => {
+    // fetch a character
+    const fetchSpecificCharacter = () => {
+      fetchData({
+        url: `/api/character/${id}`,
+        method: "GET",
+      });
+    };
+
     fetchSpecificCharacter();
-  }, []);
+  }, [fetchData, id]);
   // console.log("location", data);
   return (
     <div className="Location" data-testid="Location">

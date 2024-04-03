@@ -9,17 +9,16 @@ const Home = () => {
 
   const { data, loading, fetchData } = UseAxios();
 
-  // fetch a character using axios get method
-  const fetchCharacter = () => {
-    fetchData({
-      url: "/api/character",
-      method: "GET",
-    });
-  };
-
   useEffect(() => {
+    // fetch a character using axios get method
+    const fetchCharacter = () => {
+      fetchData({
+        url: "/api/character",
+        method: "GET",
+      });
+    };
     fetchCharacter();
-  }, []);
+  }, [fetchData]);
 
   return (
     <div className="Home" data-testid="Home">

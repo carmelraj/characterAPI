@@ -11,18 +11,16 @@ const SubCharacter = () => {
   const { data, loading, fetchData } = UseAxios();
   const { id } = useParams();
 
-  console.log(data);
-  // fetch a character
-  const fetchSpecificCharacter = () => {
-    fetchData({
-      url: `/api/character/${id}`,
-      method: "GET",
-    });
-  };
-
   useEffect(() => {
+    // fetch a character
+    const fetchSpecificCharacter = () => {
+      fetchData({
+        url: `/api/character/${id}`,
+        method: "GET",
+      });
+    };
     fetchSpecificCharacter();
-  }, []);
+  }, [fetchData, id]);
 
   return (
     <div className="subCharacter" data-testid="SubCharacter">

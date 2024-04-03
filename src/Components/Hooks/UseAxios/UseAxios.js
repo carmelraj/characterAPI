@@ -36,6 +36,7 @@ const UseAxios = () => {
 
   useEffect(() => {
     return () => controller?.abort(); // removing existing abort contrller or during unmount will abort it
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchData = async ({ url = "", method, data = {}, params = {} }) => {

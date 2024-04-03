@@ -7,18 +7,16 @@ const Residence = () => {
   const { data, fetchData } = UseAxios();
   const { id } = useParams();
 
-  console.log(">>>", data);
-  // fetch a character
-  const fetchSpecificCharacter = () => {
-    fetchData({
-      url: `/api/location/${id}`,
-      method: "GET",
-    });
-  };
-
   useEffect(() => {
+    // fetch a character
+    const fetchSpecificCharacter = () => {
+      fetchData({
+        url: `/api/location/${id}`,
+        method: "GET",
+      });
+    };
     fetchSpecificCharacter();
-  }, []);
+  }, [fetchData, id]);
   return (
     <div className="Residence" data-testid="Residence">
       <CardFour data={data} />
