@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./subCharacter.scss";
 import { useParams } from "react-router-dom";
 import UseAxios from "../../Components/Hooks/UseAxios/UseAxios";
 // import CardOne from "../../Components/Card/CardOne/CardOne";
 import CardTwo from "../../Components/Card/CardTwo/CardTwo";
 import UseLoader from "../../Components/Loader/Loader";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import BreadCrum from "../../Components/Breadcrum/Breadcrumn";
 const SubCharacter = () => {
-  const { data, loading, error, fetchData } = UseAxios();
+  const { data, loading, fetchData } = UseAxios();
   const { id } = useParams();
 
   console.log(data);

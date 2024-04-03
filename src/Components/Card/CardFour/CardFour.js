@@ -1,20 +1,19 @@
 import "./CardFour.scss";
-import { useEffect, useState } from "react";
-import { Row, Col, Image, Figure, Container } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+// import { useState } from "react";
+import { Container } from "react-bootstrap";
+// import { useNavigate } from "react-router-dom";
 import BreadCrum from "../../Breadcrum/Breadcrumn";
 const CardFour = ({ data }) => {
-  console.log("card4", data);
-  const [id, setId] = useState(0);
-  const navigator = useNavigate();
-  const location = useLocation();
+  // console.log("card4", data);
+  // const [id, setId] = useState(0);
+  // const navigator = useNavigate();
 
-  const showMoreDate = () => {
-    const linkUrl = data?.location?.url;
-    const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
-    navigator(`/location/${number}`);
-  };
+  // const showMoreDate = () => {
+  //   const linkUrl = data?.location?.url;
+  //   const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
+  //   setId(number);
+  //   navigator(`/location/${number}`);
+  // };
 
   return (
     <div className="CardFour">

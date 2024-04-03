@@ -1,14 +1,10 @@
 import "./CardTwo.scss";
-import { useEffect, useState } from "react";
-import { Row, Col, Image, Figure } from "react-bootstrap";
+import { useState } from "react";
+import { Image, Figure } from "react-bootstrap";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible,
-};
 const CardTwo = ({ data }) => {
   const [id, setId] = useState(0);
   const navigator = useNavigate();

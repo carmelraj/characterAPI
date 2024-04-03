@@ -1,13 +1,6 @@
 import "./BreadCrum.scss";
-import {
-  Breadcrumb,
-  Row,
-  Col,
-  DropdownButton,
-  Dropdown,
-  Badge,
-} from "react-bootstrap";
-import { useLocation, Link } from "react-router-dom";
+import { Breadcrumb, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const BreadCrum = () => {
   // const location = useLocation();
   // const pathnames = location.pathname.split("/").filter((x) => x);

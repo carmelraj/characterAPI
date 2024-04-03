@@ -1,17 +1,15 @@
 import "./CardThree.scss";
-import { useEffect, useState } from "react";
-import { Row, Col, Image, Figure, Container } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+// import { useState } from "react";
+import { Image, Figure, Container } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import BreadCrum from "../../Breadcrum/Breadcrumn";
 const CardThree = ({ data }) => {
-  const [id, setId] = useState(0);
+  // const [id, setId] = useState(0);
   const navigator = useNavigate();
-  const location = useLocation();
-
   const showMoreDate = () => {
     const linkUrl = data?.location?.url;
     const number = linkUrl.substring(linkUrl.lastIndexOf("/") + 1);
-    setId(number);
+    // setId(number);
     navigator(`/location/${number}`);
   };
 

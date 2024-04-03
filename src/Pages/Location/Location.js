@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Location.scss";
 import { useParams } from "react-router-dom";
 import UseAxios from "../../Components/Hooks/UseAxios/UseAxios";
-import CardTwo from "../../Components/Card/CardTwo/CardTwo";
+// import CardTwo from "../../Components/Card/CardTwo/CardTwo";
 import CardThree from "../../Components/Card/CardThree/CardThree";
 const Location = () => {
-  const { data, loading, error, fetchData } = UseAxios();
+  const { data, fetchData } = UseAxios();
   const { id } = useParams();
 
   console.log(data);
